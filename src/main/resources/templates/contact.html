@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | Manexra Techverse Private Limited</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="/images/logo.png" height="60" alt="Manexra Techverse">
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
+<li class="nav-item"><a class="nav-link" href="/technologies">Technologies</a></li>
+<li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="hero" style="height: 50vh;">
+    <div class="container text-center">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you</p>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+
+            <!-- CONTACT FORM -->
+            <div class="col-md-7">
+                <h3>Get in Touch</h3>
+
+<div th:if="${param.success}" class="alert alert-success">
+    Thank you! Your message has been sent successfully.
+</div>
+
+<form action="/contact" method="post">
+
+    <div class="mb-3">
+        <label class="form-label">Full Name</label>
+        <input type="text"
+               name="name"
+               class="form-control"
+               placeholder="Enter your name"
+               required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Email Address</label>
+        <input type="email"
+               name="email"
+               class="form-control"
+               placeholder="Enter your email"
+               required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Phone Number</label>
+        <input type="text"
+               name="phone"
+               class="form-control"
+               placeholder="Enter your phone number">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea name="message"
+                  class="form-control"
+                  rows="4"
+                  placeholder="Enter your message"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Send Message
+    </button>
+
+</form>
+                
+            </div>
+
+            <!-- CONTACT INFO -->
+            <div class="col-md-5">
+                <h3>Contact Information</h3>
+                <p><strong>Company:</strong> Manexra Techverse Private Limited</p>
+                <p><strong>Email:</strong> manexratechverse@gmail.com</p>
+                <p><strong>Phone:</strong> 8237935709</p>
+                <p>
+                    <strong>Address:</strong><br>
+                    121, Pencil Square Building,<br>
+                    Baramati–Bhigwan Road,<br>
+                    Near Mahindra Showroom,<br>
+                    Baramati, Pune – 413102
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container text-center">
+        <img src="/images/logo.png" height="60" class="mb-3">
+        <p>© 2025 Manexra Techverse Private Limited. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
